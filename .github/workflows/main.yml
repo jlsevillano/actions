@@ -12,9 +12,17 @@ jobs:
       uses: actions/checkout@v4.1.7
 
     - name: LS
-      run: |
-        chmod +x script.sh
-        ./script.sh
+      run: ls -la  
+
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v4.0.4
+  
+    - name: node Version
+      run: node --version
+    # - name: LS
+    #   run: |
+    #     chmod +x script.sh
+    #     ./script.sh
 
 
     # - name: Checkout
