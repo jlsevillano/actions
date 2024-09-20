@@ -8,8 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # - name: LS
+    #   run: ls -la
+
     - name: LS
-      run: ls -la
+      run: |
+        ls -la
+        echo "Hello World" >> hola.txt
+        cat hola.txt
+  
 
     # - name: Checkout
     #   uses: actions/checkout@v4.1.7
