@@ -6,6 +6,10 @@ inputs:
     description: "My Input"
     required: true
     default: "Hello World"
+  nombre:
+    description: "EL nombre"
+    required: true
+    default: "Pollo"
 
 runs:
   using: "composite"
@@ -20,7 +24,7 @@ runs:
 
     - name: Set text
       shell: bash
-      run: echo "Hello World" >> file.txt
+      run: echo "Hello ${{ inputs.nombre }}" >> file.txt
 
     - name: Read file
       shell: bash
