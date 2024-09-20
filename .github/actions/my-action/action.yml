@@ -5,13 +5,17 @@ runs:
   using: "composite"
   steps:
     - name: Hola Mundo
+      shell: bash
       run: echo "Hola Mundo"
     
     - name: touch file
+      shell: bash
       run: touch file.txt
 
     - name: Set text
+      shell: bash
       run: echo "Hello World" >> file.txt
 
     - name: Read file
+      shell: bash
       run: cat file.txt
