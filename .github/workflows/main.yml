@@ -11,6 +11,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.7
 
+    - name: MyAction
+      uses: ./.github/actions/my-action
+      # with:
+      #   myInput: 'Hello World'
+
     - name: LS
       run: ls -la  
 
@@ -22,8 +27,8 @@ jobs:
     - name: node Version
       run: node --version
     
-    - name: INstall Paquete
-      run: npm install
+    # - name: INstall Paquete
+    #   run: npm install
 
     - name: Setup PHP with PECL extension
       uses: shivammathur/setup-php@v2

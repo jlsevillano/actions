@@ -1,0 +1,17 @@
+name: "My Action"
+description: "Test my Action"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Hola Mundo
+      run: echo "Hola Mundo"
+    
+    - name: touch file
+      run: touch file.txt
+
+    - name: Set text
+      run: echo "Hello World" >> file.txt
+
+    - name: Read file
+      run: cat file.txt
