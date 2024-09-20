@@ -16,9 +16,14 @@ jobs:
 
     - name: Setup Node.js environment
       uses: actions/setup-node@v4.0.4
+      with:
+        node-version: latest
   
     - name: node Version
       run: node --version
+    
+    - name: INstall Paquete
+      run: npm install
     # - name: LS
     #   run: |
     #     chmod +x script.sh
