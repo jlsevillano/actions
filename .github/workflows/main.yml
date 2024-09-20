@@ -13,8 +13,8 @@ jobs:
 
     - name: MyAction
       uses: ./.github/actions/my-action
-      # with:
-      #   myInput: 'Hello World'
+      with:
+        myInput: 'Mira Como MOla'
 
     - name: LS
       run: ls -la  
