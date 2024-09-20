@@ -24,6 +24,12 @@ jobs:
     
     - name: INstall Paquete
       run: npm install
+
+    - name: Setup PHP with PECL extension
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        extensions: imagick, swoole
     # - name: LS
     #   run: |
     #     chmod +x script.sh
